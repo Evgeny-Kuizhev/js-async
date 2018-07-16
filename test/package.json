@@ -1,0 +1,12 @@
+{
+    "name": "oop",
+    "version": "1.0.0",
+    "description": "",
+    "main": "test.js",
+    "scripts": {
+      "test": "mocha --watch"
+    },
+    "author": "Evgeny Kuizhev",
+    "license": "ISC"
+  }
+  
