@@ -1,14 +1,38 @@
 <!DOCTYPE HTML>
 <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <title>Шаблонизатор</title>
+    </head>
+
     <body>
-        <div id="box">
-            <!-- Here will be info about cource -->
-        </div>
+        <section>
+            <h1> Добропожаловать на курс "{{ course.title }}"! </h1>
+            <div>
+                <h3>Здесь вы пройдете темы:</h3>
+                <ul>
+                    {{ #course.themes }}
+                     <li>{{ title }}</li>
+                    {{ /course.themes }}
+                </ul>
+            </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <br>
 
-        <script id="template" type="x-tmpl-mustache">
-            Hello {{ course.title }}!
-        </script>
+            <div>
+                <h3>Для каждой темы будет провека материала по следующим вопросам:</h3>
+                {{ #course.themes }}
+                   <h4>Для {{ title }}:</h4>
+                    <ul>
+                        {{ #questions }}
+                        <li> {{ title }} </li>
+                        {{ /questions}}
+                    </ul>
+                {{ /course.themes }}
+            </div>
+        </section>
     </body>
+
 </html>
