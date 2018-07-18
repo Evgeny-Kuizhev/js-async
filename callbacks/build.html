@@ -1,14 +1,38 @@
 <!DOCTYPE HTML>
 <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Шаблонизатор</title>
+    </head>
+
     <body>
-        <div id="box">
-            <!-- Here will be info about cource -->
-        </div>
+        <section>
+            <h1> Добропожаловать на курс "Основы гит и баш"! </h1>
+            <div>
+                <h3>Здесь вы пройдете темы:</h3>
+                <ul>
+                     <li>Гит</li>
+                     <li>Bash</li>
+                </ul>
+            </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <br>
 
-        <script id="template" type="x-tmpl-mustache">
-            Hello Основы гит и баш!
-        </script>
+            <div>
+                <h3>Для каждой темы будет провека материала по следующим вопросам:</h3>
+                   <h4>Для Гит:</h4>
+                    <ul>
+                        <li> Как создать ветку? </li>
+                        <li> Как добавить файл в индекс? </li>
+                    </ul>
+                   <h4>Для Bash:</h4>
+                    <ul>
+                        <li> Как создать папку? </li>
+                        <li> Как удалить папку? </li>
+                    </ul>
+            </div>
+        </section>
     </body>
+
 </html>
