@@ -1,0 +1,10 @@
+{
+  "name": "js-async",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "mustache data.json template.html > build.html"
+  },
+  "author": "Evgeny Kuizhev",
+  "license": "ISC"
+}
