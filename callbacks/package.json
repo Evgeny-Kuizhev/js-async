@@ -6,5 +6,8 @@
     "build": "mustache data.json template.html > build.html"
   },
   "author": "Evgeny Kuizhev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  }
 }
