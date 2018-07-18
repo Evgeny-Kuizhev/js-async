@@ -6,7 +6,7 @@
         "title": "Гит",
         "questions": [
           {
-            "title": "'Как создать ветку?",
+            "title": "Как создать ветку?",
             "answers": [
               {
                 "title": "git branch",
@@ -53,7 +53,7 @@
         "title": "Bash",
         "questions": [
           {
-            "title": "'Как создать папку?",
+            "title": "Как создать папку?",
             "answers": [
               {
                 "title": "mkdir ",
