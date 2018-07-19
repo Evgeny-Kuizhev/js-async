@@ -8,6 +8,7 @@
   "author": "Evgeny Kuizhev",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.1",
     "mustache": "^2.3.0"
   }
 }
