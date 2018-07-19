@@ -3,13 +3,10 @@ const
     mustache = require('mustache');
 
 
-Promise.resolve('data.json')
-.then(file => {
-    return new Promise((resole, reject) => {
-        fs.readFile(file, {encoding: 'utf-8'}, (err, data) => {
-            if (err) reject(err);
-            else resole(JSON.parse(data));
-        });
+new Promise((resole, reject) => {
+    fs.readFile('data.json', {encoding: 'utf-8'}, (err, data) => {
+        if (err) reject(err);
+        else resole(JSON.parse(data));
     });
 })
 .then(view => {
@@ -27,9 +24,11 @@ Promise.resolve('data.json')
 })
 .then(build => {
     // запись сгенерированного файла
-    fs.writeFile('build.html', build, err => {
-        if (err) throw err;
-    });
+    return new Promise((resole, reject) => {
+        fs.writeFile('build.html', build, err => {
+            if (err ) reject(err);
+        });
+    })
 })
 .catch(err => console.log(err));
 
