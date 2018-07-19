@@ -1,0 +1,114 @@
+{
+  "course": {
+    "title": "Основы гит и баш",
+    "themes": [
+      {
+        "title": "Гит",
+        "questions": [
+          {
+            "title": "Как создать ветку?",
+            "answers": [
+              {
+                "title": "git branch",
+                "correct": true
+              },
+              {
+                "title": "git checkout -b ",
+                "correct": true
+              },
+              {
+                "title": "git new branch",
+                "correct": false
+              },
+              {
+                "title": "git create branch",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "title": "Как добавить файл в индекс?",
+            "answers": [
+              {
+                "title": "git add",
+                "correct": true
+              },
+              {
+                "title": "git add .",
+                "correct": true
+              },
+              {
+                "title": "git indexed",
+                "correct": false
+              },
+              {
+                "title": "git file add",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Bash",
+        "questions": [
+          {
+            "title": "Как создать папку?",
+            "answers": [
+              {
+                "title": "mkdir ",
+                "correct": true
+              },
+              {
+                "title": "mkdir -p",
+                "correct": true
+              },
+              {
+                "title": "create folder",
+                "correct": false
+              },
+              {
+                "title": "add folder",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "title": "Как удалить папку?",
+            "answers": [
+              {
+                "title": "rmdir ",
+                "correct": true
+              },
+              {
+                "title": "rm -rf",
+                "correct": true
+              },
+              {
+                "title": "remove folder",
+                "correct": false
+              },
+              {
+                "title": "delete folder",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "title": "Как сменить папку?",
+            "answers": [
+              {
+                "title": "cd ",
+                "correct": true
+              },
+              {
+                "title": "change folder",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
