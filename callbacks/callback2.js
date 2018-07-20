@@ -12,7 +12,7 @@ async.map(
         fs.readFile(file, {encoding: 'utf-8'}, (err, data) => {
             data = JSON.parse(data);
             cb(err, data);
-        })
+        });
     },
     // ------CALLBACK------
     (err, view) => {
@@ -30,6 +30,6 @@ async.map(
             });
         });
     } else {
-        console.log('Error:', err)
+        console.log('Error:', err);
     }
 });
