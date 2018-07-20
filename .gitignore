@@ -1,4 +1,4 @@
 .DS_Store
 .editorconfig
 
-callbacks/node_modules/*
+node_modules/*
