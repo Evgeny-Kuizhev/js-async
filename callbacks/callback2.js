@@ -15,9 +15,9 @@ async.map(
         });
     },
     // ------CALLBACK------
-    (err, view) => {
+    (err, result) => {
     if (!err) {
-        view = Object.assign(...view);
+        view = Object.assign(...result);
         fs.readFile('template.html', {encoding: 'utf-8'}, (err, template) => {
             if (err) throw err
             // необязательно, ускоряет последующее использование
