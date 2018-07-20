@@ -1,13 +1,32 @@
 const
     fs = require('fs'),
-    mustache = require('mustache');
+    mustache = require('mustache'),
+    async = require('async');
 
+
+function readFiles(files, resolve, reject) {
+    async.map(
+        // --------DATA---------
+        files,
+        // ------FUNCTION------
+        (file, cb) => {
+            fs.readFile(file, {encoding: 'utf-8'}, (err, data) => {
+                if (err) reject(err);
+                data = JSON.parse(data);
+                cb(err, data);
+            });
+        },
+        // ------CALLBACK------
+        (err, result) => {
+        if (err) reject(err);
+        const view = Object.assign(...result);
+        resolve(view);
+    });
+}
 
 new Promise((resolve, reject) => {
-    fs.readFile('data.json', {encoding: 'utf-8'}, (err, data) => {
-        if (err) reject(err);
-        else resolve(JSON.parse(data));
-    });
+    const files = ['data.json', 'data2.json'];
+    readFiles(files, resolve, reject);
 })
 .then(view => {
     return new Promise((resolve, reject) => {
