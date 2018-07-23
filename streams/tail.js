@@ -11,7 +11,7 @@ file.on('data', chunk => {
     if (lines.length >= n) {
         lastItems = lines.slice(-n);
     } else {
-        lastItems.push(lines);
+        lastItems.push(...lines);
         lastItems = lastItems.slice(-n);
     }
 })
