@@ -2,7 +2,7 @@ const
     fs = require('fs'),
 
     fileName = process.argv[2];
-    n = +process.argv[3];
+    n = +process.argv[3] || 10;
     file = fs.createReadStream(fileName, 'utf8');
 
 let lastItems = [];
